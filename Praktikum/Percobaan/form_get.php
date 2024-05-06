@@ -4,8 +4,8 @@
     </head>
     <body>
         <form action="proses_get.php" method="GET">
-            Nama : <input type="text" name="nama"><br>
-            Alamat : <input type="text" name="Alamat"><br>
+            Nama : <input type="text" name="nama">
+            Alamat : <input type="text" name="alamat">
 
             <input type="submit" value="simpan">
         </form>
