@@ -17,8 +17,8 @@
             <input type="checkbox" id="tumis_kangkung" name="menu[]" value="tumis_kangkung">
             <label for="tumis_kangkung">Tumis Kangkung---> Rp. 2000</label><br>
             <p>
-                <br><label for="name">Name:</label>
-                <input type="etext" id="name" name="nama">
+                <br><label for="nama">Nama:</label>
+                <input type="etext" id="nama" name="nama">
                 <p>
                     <input type="submit" value="Bayar Sekarang">
                 </p>
