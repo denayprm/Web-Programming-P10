@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Nama tidak dimasukkan!";
         exit;
     }
-
     if(isset($_POST["menu"])) {
+
         $total_price = 0;
 
         foreach($_POST["menu"] as $menu) {
