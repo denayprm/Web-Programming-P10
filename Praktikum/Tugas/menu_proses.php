@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     if(isset($_POST["nama"])) {
         $nama = $_POST["nama"];
     } else {
@@ -13,49 +12,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         foreach($_POST["menu"] as $menu) {
             switch ($menu) {
-                case "nasi":
-                    $total_price += 2000;
-                    break;
-                case "ikan_bakar":
-                    $total_price += 3000;
-                    break;
-                case "ayam_bakar":
-                    $total_price += 4000;
-                    break;
-                case "sayur_lodeh":
-                    $total_price += 2000;
-                    break;
-                case "tumis_kangkung":
-                    $total_price += 2000;
-                    break;
+                case "nasi":$total_price += 2000;break;
+                case "ikan_bakar":$total_price += 3000;break;
+                case "ayam_bakar":$total_price += 4000;break;
+                case "sayur_lodeh":$total_price += 2000;break;
+                case "tumis_kangkung":$total_price += 2000;break;
                 default:
-                    echo "Invalid menu selection!";
-                    exit;
+                echo "Invalid menu selection!";exit;
             }
         }
-
 
         $bonus = "";
         $free_drinks = "";
 
         if ($total_price >= 7000 && $total_price < 13000) {
             $total_price -= 500;
-            $bonus = "Hi, $nama! Bonus: Cold drink.";
-            $free_drinks = "Free drinks: Cold drinks.";
+            $bonus = "<h2>Hi, $nama</h2>";
+            $free_drinks = "<h1>Bonus :</h1>
+                            <ul>
+                            <li>Minuman Gratis : Teh Manis Dingin</li>
+                            </ul>";
         } elseif ($total_price == 13000) {
             $total_price *= 0.9;
-            $bonus = "Hi, $nama! Bonus: Orange juice. Discount: 10%.";
-            $free_drinks = "Free drinks: Juice.";
+            $bonus = "<h2>Hi, $nama</h2>";
+            $free_drinks = "<h1>Bonus :</h1>
+                            <ul>
+                            <li>Minuman Gratis : Jus Alpukat</li>
+                            <li>Diskon : 1.300</li>
+                            <li>Harga Sekarang : 11.700</li>
+                            </ul>";
         } else {
-            $bonus = "Hi, $nama! Happy eating at Kantin Mamah Dedeh.";
+            $bonus = "<h2>Selamat Makan $nama, by Mamah Dedeh.</h2>";
         }
-
         $formatted_price = number_format($total_price, 0, ',', '.');
+?>
 
-        echo "<p>Total price: Rp. $formatted_price</p>";
-        echo "<p>Congratulations, $nama! Enjoy your meal by Mamah Dedeh.</p>";
-        echo "<p>$bonus</p>";
-        echo "<p>$free_drinks</p>";
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pembayaran Anda</title>
+    </head>
+    <body>
+        <h1>Total Harga : <?php echo $formatted_price; ?></h1>
+        <p><?php echo $bonus; ?></p>
+        <p><?php echo $free_drinks; ?></p>
+    </body>
+</html>
+
+<?php
     } else {
         echo "Anda belum memilih menu!";
     }
