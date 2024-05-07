@@ -1,5 +1,5 @@
 <?php
-    $nama - $_POST["nama"];
+    $nama = $_POST["nama"];
     $jk = $_POST["jk"];
     $prodi = $_POST["prodi"];
     $hobi = $_POST["hobi"];

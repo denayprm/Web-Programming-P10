@@ -1,5 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     if(isset($_POST["nama"])) {
         $nama = $_POST["nama"];
     } else {
@@ -32,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     exit;
             }
         }
+
 
         $bonus = "";
         $free_drinks = "";

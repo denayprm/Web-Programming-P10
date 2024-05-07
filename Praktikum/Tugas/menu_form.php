@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kantin</title>
+        <title>Menu Kantin</title>
     </head>
     <body>
         <h2>Daftar Menu di Kantin Mamah Dedeh</h2>
