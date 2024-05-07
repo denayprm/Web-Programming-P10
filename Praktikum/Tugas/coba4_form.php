@@ -18,7 +18,7 @@
             <label for="tumis_kangkung">Tumis Kangkung---> Rp. 2000</label><br>
             <p>
                 <br><label for="name">Name:</label>
-                <input type="etext" id="name" name="name">
+                <input type="etext" id="name" name="nama">
                 <p>
                     <input type="submit" value="Bayar Sekarang">
                 </p>
