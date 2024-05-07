@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 case "sayur_lodeh":$total_price += 2000;break;
                 case "tumis_kangkung":$total_price += 2000;break;
                 default:
-                echo "Invalid menu selection!";exit;
+                echo "Anda belum memilih menu!";exit;
             }
         }
 
